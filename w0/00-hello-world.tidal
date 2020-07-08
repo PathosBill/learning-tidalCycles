@@ -39,3 +39,27 @@ p "herman" $ sound "hh hh hh:7 hh hh hh:7 "
 d1 $ sound "bd sd"
 d1 $ sound "bd sd hh cp mt arpy drum"
 d1 $ sound "bd sd hh cp mt arpy drum odx bd arpy bass2 feel future"
+
+-- silencing patterns
+-- silence a single connection
+d1 silence
+
+-- silence everything
+hush
+
+-- you can also solo a connection
+
+d1 $ sound "bd"
+
+d2 $ sound "~ ep"
+
+-- run this and only the bass drum plays
+solo 1
+
+-- unsolo it and ep plays again
+unsolo 1
+
+-- square brackets allow you to put a pattern within a pattern
+-- the pattern inside the brackets takes up one "step" in the parent patttern
+
+d1 $ sound "[bd [sd sd]] cp"
