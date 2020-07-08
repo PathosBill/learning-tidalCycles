@@ -1,0 +1,4 @@
+-- playing with basic Tidal syntax
+d1 $ sound "bd sn"
+
+hush
