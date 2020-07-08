@@ -2,3 +2,40 @@
 d1 $ sound "bd sn"
 
 hush
+
+
+--play single sound
+d1 $ sound "bd"
+
+--sound followed by colon selects from samples in named folder
+d1 $ sound "808:1"
+d1 $ sound "808:2"
+
+--another syntax for sample selection. this allows us to select
+--the sample separately, which will be useful later
+d1 $ sound "808" # n "3"
+
+--sequences from multiple samples
+d1 $ sound "bd sd:1"
+
+--multiple sequences
+
+d1 $ sound "bd sd:1"
+
+d2 $ sound "hh hh hh hh:3"
+
+d3 $ sound "arpy"
+
+hush
+
+
+--you can name patterns
+
+p "susan" $ sound "bd bd sd:3"
+
+p "herman" $ sound "hh hh hh:7 hh hh hh:7 "
+
+-- all samples in a pattern get squashed into a cycleArc
+d1 $ sound "bd sd"
+d1 $ sound "bd sd hh cp mt arpy drum"
+d1 $ sound "bd sd hh cp mt arpy drum odx bd arpy bass2 feel future"
