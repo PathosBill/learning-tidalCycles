@@ -63,3 +63,23 @@ unsolo 1
 -- the pattern inside the brackets takes up one "step" in the parent patttern
 
 d1 $ sound "[bd [sd sd]] cp"
+
+-- variations on 2 step patterns using brackets
+
+d1 $ sound "bd [sd sd]"
+d1 $ sound "bd [sd sd sd]"
+d1 $ sound "bd [sd sd sd sd]"
+d1 $ sound "[bd bd] [sd sd sd]"
+d1 $ sound "[bd bd bd] [sd sd]"
+
+-- you can nest patterns within patterns within patterns within patterns
+d1 $ sound "[bd bd] [bd [sd sd] sd] sd "
+
+-- you can use periods in place of brackets. this is a new feature
+
+d1 $ sound " bd bd . sd sd sd . bd sd"
+-- is equivalent to
+d1 $ sound "[bd bd] [sd sd sd] [bd sd]"
+
+-- layering
+d1 $ sound "[bd bd bd , sd cp sd cp]"
